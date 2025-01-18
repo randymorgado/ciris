@@ -1,0 +1,4 @@
+This script automatically changes the status to "canceled" after x minutes. It's useful for payments with Flow or cards that remain in "pending" status, consuming stock. The code will automatically cancel the order and invalidate it if the status remains as "waiting for payment" after x minutes.
+
+It is executed via cron in cPanel:
+curl -v 'https://www.domain.com/cancel_pending_orders.php' >/dev/null 2>&1
